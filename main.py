@@ -5,7 +5,7 @@ from typing import List, Optional
 from datetime import datetime
 import os
 
-app = FastAPI(title="Todo API", description="A simple todo management API", version="1.0.0")
+app = FastAPI(title="Todo API", description="A simple todo management API with auto-deployment", version="1.0.1")
 
 # Configure CORS
 app.add_middleware(
@@ -36,7 +36,7 @@ next_id = 3
 @app.get("/")
 async def root():
     return {
-        "message": "Todo API v1.0.0 is running! 🚀",
+        "message": "Todo API v1.0.1 is running! 🚀 Auto-deployment test!",
         "endpoints": {
             "GET /todos": "Get all todos",
             "POST /todos": "Create a new todo",
